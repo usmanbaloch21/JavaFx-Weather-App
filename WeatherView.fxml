@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="526.0" prefWidth="1097.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <ImageView fitHeight="639.0" fitWidth="1097.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@apps.49734.13664108468657913.b2afee87-e051-45f9-b7b2-c9e38b9d2b59.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="-1.0" prefHeight="526.0" prefWidth="1097.0">
+         <children>
+            <Label layoutX="443.0" layoutY="14.0" text="Weather Application" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="30.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableView" layoutX="41.0" layoutY="79.0" prefHeight="387.0" prefWidth="1026.0">
+              <columns>
+                <TableColumn fx:id="stationCol" prefWidth="154.0" text="MeteoroLogical Station" />
+                <TableColumn fx:id="tmaxCol" minWidth="0.0" prefWidth="313.0" text="Highest monthly mean maximum temperature (tmax)" />
+                  <TableColumn fx:id="tminCol" minWidth="0.0" prefWidth="317.0" text="Lowest monthly mean minimum temperature (tmin)" />
+                  <TableColumn fx:id="afCol" minWidth="0.0" prefWidth="133.0" text="Total AirFroast Days" />
+                  <TableColumn fx:id="rainCol" minWidth="0.0" prefWidth="108.0" text="Total RainFall" />
+              </columns>
+            </TableView>
+            <Button fx:id="reportBtn" layoutX="483.0" layoutY="480.0" mnemonicParsing="false" onAction="#generateReport" prefHeight="38.0" prefWidth="172.0" style="-fx-background-color: #ffffff;" text="Generate Report">
+               <font>
+                  <Font name="Impact" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
